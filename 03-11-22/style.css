@@ -1,0 +1,161 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(243, 232, 175);
+  scroll-behavior: smooth;
+}
+nav {
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+}
+
+.btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: gold;
+  text-decoration-color: bisque;
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration: dotted;
+  filter: drop-shadow(0.8);
+  transform: scale(0.9);
+  transition: all 0.7s;
+  object-fit: cover;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a {
+  padding: 10px;
+  gap: 30px;
+}
+a {
+  color: gold;
+  font-style: oblique;
+  font-weight: bold;
+  text-decoration: wavy;
+  font-size: 1 rem;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 50 px 50px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero h1 {
+  color: black;
+}
+.play {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+  background-color: whitesmoke;
+  cursor: pointer;
+  filter: drop-shadow(0.8);
+  transform: scale(0.9);
+  transition: all 0.7s;
+  object-fit: cover;
+}
+h1,
+h5 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 20px;
+}
+h2,
+h3,
+p {
+  font-family: cursive;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: gold;
+  cursor: pointer;
+  filter: drop-shadow(0.8);
+  transform: scale(0.9);
+  transition: all 0.5s;
+  object-fit: cover;
+}
+img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0);
+  transform: scale(1);
+}
+
+p {
+  border: 2px black solid;
+  border-radius: 20px;
+  box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.footers {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: left;
+  background-color: black;
+}
+.footers h6,
+h1 {
+  color: whitesmoke;
+}
+
+.fifa {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
