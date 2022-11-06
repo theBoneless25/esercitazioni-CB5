@@ -80,11 +80,11 @@ heroTextEl.textContent =
   "Disponibile su PS5, PS4, Xbox Series X|S, Xbox One, Stadia, e PC. ";
 heroEl.appendChild(heroTextEl);
 
+//----CREAZIONI CARD
+
 const cardDiv = document.createElement("div");
 cardDiv.className = "div_card";
 bodyEl.appendChild(cardDiv);
-
-//----CREAZIONI CARD
 
 const cardText = document.createElement("h1");
 cardText.className = "text_card";
