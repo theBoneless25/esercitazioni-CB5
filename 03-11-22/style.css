@@ -4,21 +4,29 @@ body {
   padding: 0;
   color: black;
   font-size: 18px;
+  height: 100%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: rgb(243, 232, 175);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 nav {
-  min-width: 100px;
   display: flex;
   justify-content: space-between;
 }
 .navbar {
-  margin-top: 0;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  padding: 25px 25px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background-color: black;
+  z-index: 1;
 }
 
 .btn {
@@ -48,7 +56,7 @@ button:hover {
 }
 .navbar ul li a {
   padding: 10px;
-  gap: 30px;
+  gap: 50px;
 }
 a {
   color: gold;
@@ -64,13 +72,15 @@ a:hover {
 }
 
 .hero {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin: 50 px 50px;
   background-color: whitesmoke;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 0;
+  padding-top: 200px;
+  padding-bottom: 150px;
+  width: 100%;
 }
 
 .hero h1 {
@@ -91,28 +101,71 @@ a:hover {
   object-fit: cover;
 }
 h1,
-h5 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 20px;
-}
+h5,
 h2,
 h3,
 p {
   font-family: cursive;
   cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 20px;
 }
-
+.text_card {
+  color: black;
+  margin: auto;
+  font-weight: 500;
+  text-align: center;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .card {
+  width: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card img {
+  width: 100px;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gk_card,
+.df_card,
+.mid_card,
+.forw_card {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hr_card {
+  border-radius: 10px;
+  border-bottom: 3px bold black;
+  width: 700px;
 }
 
 .image {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 120px;
@@ -138,9 +191,24 @@ p {
   box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
 }
 
+.pre_footer {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 50px;
+}
+
+.img_footer {
+  border-radius: 20px;
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.3);
+}
+
 .footers {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   align-items: left;
   background-color: black;
@@ -158,4 +226,44 @@ h1 {
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  .hero img h5 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+  }
+  .hero h5 {
+    text-align: left;
+  }
+  .dftext_card,
+  .gktext_card,
+  .midtext_card,
+  .forwtext_card {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  .hr_card {
+    border-radius: 5px;
+    border-bottom: 2px bold gold;
+    width: 300px;
+  }
 }

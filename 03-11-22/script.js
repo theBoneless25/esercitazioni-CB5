@@ -3,6 +3,8 @@ import players from "./players.js";
 
 //--players.map((players) => console.log(players));
 
+const darkToggle = document.querySelector("#darkMode");
+
 //---NAVBAR---
 const navEl = document.createElement("nav");
 navEl.className = "navbar";
@@ -76,44 +78,169 @@ heroTextEl.textContent =
   "Disponibile su PS5, PS4, Xbox Series X|S, Xbox One, Stadia, e PC. ";
 heroEl.appendChild(heroTextEl);
 
-const createCard = (data, parent) => {
+const cardDiv = document.createElement("div");
+cardDiv.className = "div_card";
+bodyEl.appendChild(cardDiv);
+
+const cardText = document.createElement("h1");
+cardText.className = "text_card";
+cardText.textContent = "COSTRUISCI LA TUA PRIMA SQUADRA SU FUT:";
+bodyEl.appendChild(cardText);
+
+const cardTextGk = document.createElement("h3");
+cardTextGk.className = "gktext_card";
+cardTextGk.textContent = "PORTIERI:";
+
+bodyEl.appendChild(cardTextGk);
+const cardGk = document.createElement("div");
+cardGk.className = "gk_card";
+bodyEl.appendChild(cardGk);
+
+const createCard1 = (data, parent) => {
   const cardEl = document.createElement("div");
   cardEl.className = "card";
   const cardImgEl = document.createElement("img");
   cardImgEl.className = "image";
-  const cardTitleEl = document.createElement("h2");
-  const cardNationEl = document.createElement("h3");
-  const cardLeagueEl = document.createElement("h3");
-  const cardParagEl = document.createElement("p");
 
   cardImgEl.setAttribute("src", data.image);
   cardImgEl.setAttribute("alt", data.title);
-  cardTitleEl.textContent = data.title;
-  cardNationEl.textContent = data.nationality;
-  cardLeagueEl.textContent = data.league;
-  cardParagEl.textContent = data.rating;
 
-  cardEl.append(
-    cardImgEl,
-    cardTitleEl,
-    cardNationEl,
-    cardLeagueEl,
-    cardParagEl
-  );
+  cardEl.append(cardImgEl);
   parent.appendChild(cardEl);
 };
 
-players
-  .filter((el) => el.league === "Premier League")
-  .map((players) => createCard(players, bodyEl));
+const goalkeeperEl = document.querySelector(".gk_card");
 
 players
-  .filter((el) => el.league === "Ligue 1")
-  .map((players) => createCard(players, bodyEl));
+  .filter((player) => player.role === "Goalkeeper")
+  .map((player) => {
+    createCard1(player, goalkeeperEl);
+  });
+
+const cardGkHr = document.createElement("hr");
+cardGkHr.className = "hr_card";
+bodyEl.appendChild(cardGkHr);
+
+const cardTextDf = document.createElement("h3");
+cardTextDf.className = "dftext_card";
+cardTextDf.textContent = "DIFENSORI:";
+bodyEl.appendChild(cardTextDf);
+
+const cardDf = document.createElement("div");
+cardDf.className = "df_card";
+bodyEl.appendChild(cardDf);
+
+const createCard2 = (data, parent) => {
+  const cardEl = document.createElement("div");
+  cardEl.className = "card";
+  const cardImgEl = document.createElement("img");
+  cardImgEl.className = "image";
+
+  cardImgEl.setAttribute("src", data.image);
+  cardImgEl.setAttribute("alt", data.title);
+
+  cardEl.append(cardImgEl);
+  parent.appendChild(cardEl);
+};
+
+const defenderEl = document.querySelector(".df_card");
 
 players
-  .filter((el) => el.league === "Liga")
-  .map((players) => createCard(players, bodyEl));
+  .filter((player) => player.role === "Defender")
+  .map((player) => {
+    createCard2(player, defenderEl);
+  });
+
+const cardDfHr = document.createElement("hr");
+cardDfHr.className = "hr_card";
+bodyEl.appendChild(cardDfHr);
+
+const cardTextMid = document.createElement("h3");
+cardTextMid.className = "midtext_card";
+cardTextMid.textContent = "CENTROCAMPISTI:";
+bodyEl.appendChild(cardTextMid);
+
+const cardMid = document.createElement("div");
+cardMid.className = "mid_card";
+bodyEl.appendChild(cardMid);
+
+const createCard3 = (data, parent) => {
+  const cardEl = document.createElement("div");
+  cardEl.className = "card";
+  const cardImgEl = document.createElement("img");
+  cardImgEl.className = "image";
+
+  cardImgEl.setAttribute("src", data.image);
+  cardImgEl.setAttribute("alt", data.title);
+
+  cardEl.append(cardImgEl);
+  parent.appendChild(cardEl);
+};
+
+const midfielderEl = document.querySelector(".mid_card");
+
+players
+  .filter((player) => player.role === "Midfielder")
+  .map((player) => {
+    createCard3(player, midfielderEl);
+  });
+
+const cardMidHr = document.createElement("hr");
+cardMidHr.className = "hr_card";
+bodyEl.appendChild(cardMidHr);
+
+const cardTextForw = document.createElement("h3");
+cardTextForw.className = "forwtext_card";
+cardTextForw.textContent = "ATTACCANTI:";
+bodyEl.appendChild(cardTextForw);
+
+const cardForw = document.createElement("div");
+cardForw.className = "forw_card";
+bodyEl.appendChild(cardForw);
+
+const createCard4 = (data, parent) => {
+  const cardEl = document.createElement("div");
+  cardEl.className = "card";
+  const cardImgEl = document.createElement("img");
+  cardImgEl.className = "image";
+
+  cardImgEl.setAttribute("src", data.image);
+  cardImgEl.setAttribute("alt", data.title);
+
+  cardEl.append(cardImgEl);
+  parent.appendChild(cardEl);
+};
+
+const forwardEl = document.querySelector(".forw_card");
+
+players
+  .filter((player) => player.role === "Forward")
+  .map((player) => {
+    createCard4(player, forwardEl);
+  });
+
+const cardForHr = document.createElement("hr");
+cardForHr.className = "hr_card";
+bodyEl.appendChild(cardForHr);
+
+const preFooter = document.createElement("section");
+preFooter.className = "pre_footer";
+bodyEl.appendChild(preFooter);
+
+const textPreFooter = document.createElement("h3");
+textPreFooter.textContent = "INIZIA SCARICANDO LA WEB APP!!";
+preFooter.appendChild(textPreFooter);
+
+const imgPreFooter = document.createElement("img");
+imgPreFooter.className = "img_footer";
+imgPreFooter.setAttribute("src", "./images/header.png");
+imgPreFooter.setAttribute("alt", "img heroes");
+preFooter.appendChild(imgPreFooter);
+
+const btnFooter = document.createElement("button");
+btnFooter.textContent = "Buy Fifa 23";
+btnFooter.classList.add("btn");
+preFooter.appendChild(btnFooter);
 
 const createFooter = document.createElement("footer");
 createFooter.className = "footers";
@@ -121,32 +248,12 @@ const footerText = document.createElement("h1");
 footerText.textContent = "PLAY FIFA 23 TODAY";
 
 const footerTextSecond = document.createElement("h6");
-footerTextSecond.textContent =
-  "EA Play Pro members have instant access to premium versions of our brand-new games as well.";
+footerTextSecond.textContent = "Made with ⚽ by Sebastiano Occhipinti";
 
 const imgFooter = document.createElement("img");
 imgFooter.className = "fifa";
 imgFooter.setAttribute("src", "./images/fifa1.png");
 imgFooter.setAttribute("alt", "img xbox");
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    const button = document.createElement("input");
-    button.type = "button";
-    button.id = "submit";
-    button.value = "Submit";
-    button.className = "btn";
-
-    button.onclick = function () {
-      // …
-    };
-
-    const container = document.createElement("container");
-    container.appendChild(button);
-  },
-  false
-);
 
 footerText.append(footerTextSecond);
 createFooter.append(footerText);
