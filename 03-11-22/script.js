@@ -47,6 +47,8 @@ fourLinkNavEl.setAttribute("href", "");
 fourLinkNavEl.textContent = "Iscriviti";
 foNavItemEl.appendChild(fourLinkNavEl);
 
+//---CREAZIONE HERO----
+
 const heroEl = document.createElement("div");
 heroEl.className = "hero";
 bodyEl.append(heroEl);
@@ -81,6 +83,8 @@ heroEl.appendChild(heroTextEl);
 const cardDiv = document.createElement("div");
 cardDiv.className = "div_card";
 bodyEl.appendChild(cardDiv);
+
+//----CREAZIONI CARD
 
 const cardText = document.createElement("h1");
 cardText.className = "text_card";
@@ -223,6 +227,8 @@ const cardForHr = document.createElement("hr");
 cardForHr.className = "hr_card";
 bodyEl.appendChild(cardForHr);
 
+//-- SECTION P.FOOTER
+
 const preFooter = document.createElement("section");
 preFooter.className = "pre_footer";
 bodyEl.appendChild(preFooter);
@@ -241,6 +247,8 @@ const btnFooter = document.createElement("button");
 btnFooter.textContent = "Buy Fifa 23";
 btnFooter.classList.add("btn");
 preFooter.appendChild(btnFooter);
+
+//--CREAZIONE FOOTER
 
 const createFooter = document.createElement("footer");
 createFooter.className = "footers";
