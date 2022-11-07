@@ -17,7 +17,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
       console.log(
         "Name: " + i.name,
         "\n",
-        "Address: " + Object.values(i.address, i.lenght <= 3),
+        "Address: " + Object.values(i.address),
         "\n",
         "City: " + i.address.city,
         "\n"
