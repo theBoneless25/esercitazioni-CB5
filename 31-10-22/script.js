@@ -136,8 +136,6 @@ const products = [
 //-----SVOLGIMENTO--------->
 
 const listProduct = products.map((products) => {
-  //MAP ESEMPI
-
   return {
     title: products.title,
     price: products.price,
