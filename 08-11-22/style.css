@@ -19,14 +19,3 @@ body {
   border-radius: 20px;
   background-color: blue;
 }
-
-img {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  background-color: blue;
-}
