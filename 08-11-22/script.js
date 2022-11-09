@@ -1,54 +1,37 @@
-const bodyEl = document.querySelector("body");
+function createCard(i) {
+  const containerPokemonCard = document.getElementById("container");
 
-const CreateCard = (i) => {
-  const pokemonCardEl = document.createElement("div");
-  pokemonCardEl.className = "pokemon_card";
+  const card = document.createElement("div");
+  card.classList.add("cardPokemon");
+  card.classList.add(`bg-${i.types[0].type.name}`);
 
-  const imageEl = document.createElement("img");
-  imageEl.setAttribute("src", i.sprites.front_default);
+  const imagePokemon = document.createElement("img");
+  imagePokemon.src = i.sprites.front_default;
 
-  const id = document.createElement("h4");
-  id.className = "id_pokemon";
-  id.textContent = `#${i.id}`;
+  const idPokemon = document.createElement("p");
+  idPokemon.textContent = "# " + createId(i.id);
 
-  const nameEl = document.createElement("h1");
-  nameEl.textContent = i.name;
+  function createId(id) {
+    if (!id) return null;
+    if (id < 10) {
+      return `00${id}`;
+    } else if (id < 100) {
+      return `0${id}`;
+    }
+    return id;
+  }
 
-  const typesPokemonEl = document.createElement("p");
-  typesPokemonEl.className = "pokemon_types";
-  typesPokemonEl.textcontent = `Types : ${i.types[0].type.name}`;
+  const namePokemon = document.createElement("h1");
+  namePokemon.textContent = i.name;
 
-  pokemonCardEl.append(imageEl, id, nameEl, typesPokemonEl);
-  bodyEl.appendChild(pokemonCardEl);
-};
+  const typePokemon = document.createElement("h4");
+  typePokemon.textContent = "Type: " + i.types[0].type.name;
 
-fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
-  .then((res) => res.json())
-  .then((poke) => {
-    poke.results.forEach((item) =>
-      fetch(item.url).then((res) =>
-        res.json().then((pokemon) => CreateCard(pokemon))
-      )
-    );
-  });
+  card.append(imagePokemon, idPokemon, namePokemon, typePokemon);
+  containerPokemonCard.appendChild(card);
+}
 
-const colorCardPokemon = {
-  electric: "#FCF7DE",
-  water: "#DEF3FD",
-  ground: "#f4e7da",
-  rock: "#d5d5d4",
-  fairy: "#fceaff",
-  poison: "#98d7a5",
-  bug: "#f8d5a3",
-  dragon: "#97b3e6",
-  psychic: "#eaeda1",
-  flying: "#F5F5F5",
-  fighting: "#E6E0D4",
-  normal: "#F5F5F5",
-  fire: "#FDDFDF",
-  grass: "#DEFDE0",
-  ghost: "#705898",
-  ice: "#98d8d8",
-};
-
-///--HO PROVATO AD INSERIRE IL COLORE NEL BACKGROUND SOTTO CONSIGLIO DEL TUTOR MA NON SONO RIENTRATO NEL TEMPO
+for (let i = 1; i <= 150; i++)
+  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+    .then((res) => res.json())
+    .then((i) => createCard(i));

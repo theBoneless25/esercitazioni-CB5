@@ -1,21 +1,129 @@
+html,
 body {
-  background-color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0;
+  font-family: cursive;
+  background: linear-gradient(70deg, blue 0%, red 100%);
 }
 
-.pokemon_card {
-  width: 200px;
+h1 {
+  text-align: center;
+  padding: 30px 30px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.cardPokemon {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  background-color: blue;
+  width: 180px;
+  height: 450px;
+  border-radius: 16px;
+  padding: 20px 40px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.448);
+}
+
+.cardPokemon img {
+  width: 160px;
+  height: 160px;
+  border-radius: 80%;
+  margin: 20px;
+  object-fit: cover;
+  background-color: whitesmoke;
+  padding-top: 40px;
+}
+
+.card h1 {
+  font-weight: bold;
+  margin-top: -20px;
+}
+
+.card h5 {
+  font-weight: lighter;
+}
+
+.bg-normal img {
+  background-color: grey;
+}
+
+.bg-dragon {
+  background-color: #97b3e6;
+}
+
+.bg-psychic {
+  background-color: #eaeda1;
+}
+
+.bg-electric {
+  background-color: #fcf7de;
+}
+
+.bg-water {
+  background-color: #def3fd;
+}
+
+.bg-ground {
+  background-color: #f4e7da;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-poison {
+  background-color: #98d7a5;
+}
+
+.bg-bug {
+  background-color: #f8d5a3;
+}
+
+.bg-dragon {
+  background-color: #97b3e6;
+}
+
+.bg-grass {
+  background-color: #defde0;
+}
+
+.bg-flying {
+  background-color: #f5f5f5;
+}
+
+.bg-fighting {
+  background-color: #e6e0d4;
+}
+
+.bg-rock {
+  background-color: #d5d5d4;
+}
+
+.bg-normal {
+  background-color: #f5f5f5;
+}
+
+.bg-fire {
+  background-color: #fddfdf;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-ice {
+  background-color: #98d8d8;
+}
+
+.bg-fairy {
+  background-color: #fceaff;
 }
