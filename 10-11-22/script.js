@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn");
-const advice = document.getElementById("advice"); // eseguo e dichiaro i vari id e la costante end point
+const advice = document.getElementById("advice"); // eseguo e dichiaro i vari id e la costante urlADV
 const urlAdv = "https://api.adviceslip.com/advice";
 
 const getAdvice = (URL) => {
