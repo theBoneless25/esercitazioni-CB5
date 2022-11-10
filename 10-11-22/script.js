@@ -12,7 +12,7 @@ const getAdvice = (URL) => {
 
 const onFirstLoad = () => {
   btn.addEventListener("click", () => {
-    //  funzione getadvice con all'interno parametro end point
+    //   getadvice con all'interno parametro end point
     getAdvice(urlAdv);
   });
 
