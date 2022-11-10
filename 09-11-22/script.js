@@ -50,3 +50,23 @@ let request = urlArr.map((url) => {
 Promise.all(request)
   .then((res) => res.map((el) => createCard(el)))
   .finally(() => waitEl.classList.remove("start")); //uso l'array di promise per creare le card, per poi rimuovere la classe start alla comparsa delle card.
+
+const color = {
+  fire: "#F08030",
+  grass: "#78C850",
+  poison: "#A040A0",
+  water: "#6890F0",
+  bug: "#A8B820",
+  normal: "#A8A878",
+  fairy: "#EE99AC",
+  flying: "#A890F0",
+  psychic: "#F85888",
+  electric: "#F8D030",
+  steel: "#B8B8D0",
+  ice: "#98D8D8",
+  ground: "#E0C068",
+  rock: "#B8A038",
+  fighting: "#C03028",
+  ghost: "#705898",
+  dragon: "#7038F8",
+};
