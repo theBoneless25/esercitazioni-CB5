@@ -1,0 +1,158 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  background: linear-gradient(70deg, blue 0%, red 100%);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+#container button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cardPokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+
+.cardPokemon img {
+  width: 160px;
+  height: 160px;
+  border-radius: 80%;
+  margin: 20px;
+  object-fit: cover;
+  background-color: whitesmoke;
+  padding-top: 40px;
+}
+
+.card h1 {
+  font-weight: bold;
+  margin-top: -30px;
+}
+
+.card h4 {
+  font-weight: lighter;
+}
+
+.bg-normal img {
+  background-color: rgba(167, 162, 162, 0.939);
+}
+
+.bg-dragon {
+  background-color: #97b3e6;
+}
+
+.bg-psychic {
+  background-color: #eaeda1;
+}
+
+.bg-electric {
+  background-color: #fcf7de;
+}
+
+.bg-water {
+  background-color: #def3fd;
+}
+
+.bg-ground {
+  background-color: #f4e7da;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-poison {
+  background-color: #98d7a5;
+}
+
+.bg-bug {
+  background-color: #f8d5a3;
+}
+
+.bg-dragon {
+  background-color: #97b3e6;
+}
+
+.bg-grass {
+  background-color: #defde0;
+}
+
+.bg-flying {
+  background-color: #f5f5f5;
+}
+
+.bg-fighting {
+  background-color: #e6e0d4;
+}
+
+.bg-rock {
+  background-color: #d5d5d4;
+}
+
+.bg-normal {
+  background-color: #f5f5f5;
+}
+
+.bg-fire {
+  background-color: #fddfdf;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-ice {
+  background-color: #98d8d8;
+}
+
+.bg-fairy {
+  background-color: #fceaff;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.btn_prev,
+.btn_next {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  gap: 20px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
