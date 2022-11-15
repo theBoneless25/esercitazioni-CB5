@@ -22,8 +22,10 @@ const c = (el) => document.createElement(el);
  * @returns
  */
 const GET = async (URL) => {
+  loader.classList.toggle("active");
   const response = await fetch(URL); //
   const data = await response.json();
+  loader.classList.toggle("active");
   return await data;
 };
 

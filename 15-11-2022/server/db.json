@@ -1,0 +1,94 @@
+{
+  "pokemon": [
+    {
+      "id": "2925bd1d-5ad8-4193-81f8-c625c1ab3993",
+      "name": "Pikachu ",
+      "type": "eletric"
+    },
+    {
+      "id": "958f44a7-d7f8-4505-9e1a-4531f0f4eb4c",
+      "name": "Charmander ",
+      "type": "fire"
+    },
+    {
+      "id": "a3af7a01-2145-40c2-b1bb-5db1eefe622c",
+      "name": "Bulbasaur",
+      "type": "grass"
+    },
+    {
+      "id": "f8cce1b6-f526-45d8-8179-60233a6bebdf",
+      "name": "Metapod",
+      "type": "bug"
+    },
+    {
+      "id": "c07959d1-056a-4da0-af2b-798ef7a4359d",
+      "name": "Wartable",
+      "type": "water"
+    },
+    {
+      "id": "a812ab74-6f9e-42e4-978d-b7b5d5b3e6e7",
+      "name": "Kakuna",
+      "type": "bug"
+    },
+    {
+      "id": "fcd99f46-d009-40bd-83d1-04a681e3b2cf",
+      "name": "Pidgeot ",
+      "type": "normal"
+    },
+    {
+      "id": "352702d9-b7d9-4fdb-a397-5a54c08618a7",
+      "name": "Raichu",
+      "type": "eletric"
+    },
+    {
+      "id": "2a6b3062-4bdd-434c-b279-204f9a33b8d9",
+      "name": "Charizard",
+      "type": "fire"
+    },
+    {
+      "id": "2a9c20b2-021e-430a-bdc3-789109a896bb",
+      "name": "charizard",
+      "type": "fire"
+    },
+    {
+      "id": "4d0b26eb-248b-4372-95a5-bed78d9b542f",
+      "name": "charmeleon",
+      "type": "fire"
+    },
+    {
+      "id": "b4173539-f755-4961-8d6a-b620fa9bff2e",
+      "name": "charizard",
+      "type": "fire"
+    },
+    {
+      "id": "7c4cc09e-f41f-4116-b091-6555fdf74bec",
+      "name": "bulbasaur",
+      "type": "grass"
+    },
+    {
+      "id": "0f0f7d0a-9b3e-4292-b107-3ef2405fd2d6",
+      "name": "charizard",
+      "type": "fire"
+    },
+    {
+      "id": "386fa42c-c61c-4bac-9b4e-4aabe48e7ee7",
+      "name": "charizard",
+      "type": "fire"
+    },
+    {
+      "id": "c716da7b-8280-4bb7-acb1-a37c4c2abb3e",
+      "name": "pikachu",
+      "type": "eletric"
+    },
+    {
+      "id": "3bfa2bc7-b101-4f39-a36e-df20a6348315",
+      "name": "charizard",
+      "type": "fire"
+    },
+    {
+      "id": "c3842003-89cf-4de9-ac44-1591ad0ac121",
+      "name": "Venosaur",
+      "type": "grass"
+    }
+  ]
+}
