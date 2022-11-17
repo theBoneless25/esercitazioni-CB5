@@ -34,15 +34,14 @@ const createCardEl = (data, parent) => {
 };
 
 GET(BASE_URL).then((data) => {
-  productsList = data;
-  data.filter((i) => i.id <= 10).map((i) => createCardEl(i, cardList));
+  productsList = data.filter((i) => i.id <= 10);
+  productsList.map((i) => createCardEl(i, cardList));
 });
 
 inputEl.addEventListener("input", (e) => {
   console.log(productsList);
   const searchString = e.target.value;
-  const filteredProd = productsList.filter((prod) => {
-    // prod.title.includes(searchString);
+  productsList = productsList.filter((prod) => {
+    return prod.title.includes(searchString);
   });
-  console.log(filteredProd);
 });
