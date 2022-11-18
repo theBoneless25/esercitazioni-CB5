@@ -1,0 +1,44 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Pikachu ",
+      "type": "eletric"
+    },
+    {
+      "id": 2,
+      "name": "Charmander ",
+      "type": "fire"
+    },
+    {
+      "id": 3,
+      "name": "Raichu",
+      "type": "Eletric"
+    },
+    {
+      "id": 4,
+      "name": "Squirtle",
+      "type": "water"
+    },
+    {
+      "id": 5,
+      "name": "Kakuna",
+      "type": "bug"
+    },
+    {
+      "id": 6,
+      "name": "Pidgeot ",
+      "type": "normal"
+    },
+    {
+      "id": 7,
+      "name": "Raichu",
+      "type": "eletric"
+    },
+    {
+      "id": 8,
+      "name": "Charizard",
+      "type": "fire"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/800px-International_Pok%C3%A9mon_logo.svg.png"
+      alt="image"
+    />
+    <section>
+      <form class="forms" name="pokemon">
+        <form>
+          <input
+            class="search"
+            type="text"
+            placeholder="Cerca il tuo pokemon"
+          />
+        </form>
+        <form>
+          <input type="text" name="name" placeholder="NOME POKEMON" />
+          <input type="text" name="type" placeholder="TIPOLOGIA POKEMON" />
+          <input type="submit" />
+        </form>
+        <form name="pokemonPatch">
+          <input type="text" placeholder="Modifica ID" name="id" />
+          <input type="text" placeholder="Modifica Name" name="name" />
+          <input type="text" placeholder="Modifica Tipo" name="type" />
+          <input type="submit" value="Modifica" />
+        </form>
+      </form>
+    </section>
+
+    <div class="container"></div>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+  </body>
+</html>
