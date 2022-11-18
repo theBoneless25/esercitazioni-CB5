@@ -9,12 +9,6 @@ let productsList = [];
 const createCardEl = (data, parent) => {
   const { thumbnailUrl, title, url } = data;
 
-  // const elements = {
-  //   cardEl: ce("div"),
-  //   imgEl: ce("img"),
-  //   titleEl: ce("h4"),
-  //   urlEl: ce("p")
-  // }
   const cardEl = ce("div");
   const imgEl = ce("img");
   const titleEl = ce("h4");
@@ -41,7 +35,12 @@ GET(BASE_URL).then((data) => {
 inputEl.addEventListener("input", (e) => {
   console.log(productsList);
   const searchString = e.target.value;
-  productsList = productsList.filter((prod) => {
-    return prod.title.includes(searchString);
-  });
+
+  cardList.replaceChildren();
+  productsList
+    .filter((prod) => prod?.title.includes(searchString))
+    .map((product) => createCardEl(product, cardList));
+
+  console.log(productsList);
+  //
 });
