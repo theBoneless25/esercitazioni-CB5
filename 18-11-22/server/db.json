@@ -16,11 +16,6 @@
       "type": "Eletric"
     },
     {
-      "id": 4,
-      "name": "Squirtle",
-      "type": "water"
-    },
-    {
       "id": 5,
       "name": "Kakuna",
       "type": "bug"
@@ -37,8 +32,8 @@
     },
     {
       "id": 8,
-      "name": "Charizard",
-      "type": "fire"
+      "name": "charizard",
+      "type": "eletric"
     }
   ]
 }

@@ -6,8 +6,6 @@ const form = document.forms.pokemon; // Assegno due costanti ad element e form.
 const element = form.elements;
 
 let id;
-const inputEl = q(".search");
-let pokemonList = [];
 
 const formPatch = document.forms.pokemonPatch;
 const elementsFP = formPatch.elements;
@@ -70,10 +68,10 @@ const createCard = (url, id, i) => {
 
   btnModifica.addEventListener("click", () => {
     const form2 = document.forms.pokemonPatch;
-    const elements = form2.elements;
-    elements.name.value = i.name;
-    elements.id.value = i.id;
-    elements.type.value = i.type;
+    const elemento = form2.elements;
+    elemento.id.value = i.id;
+    elemento.name.value = i.name;
+    elemento.type.value = i.type;
 
     PATCH(url, id, data)
       .then(() => location.reload())
@@ -96,16 +94,4 @@ window.onload = GET(url).then((i) => {
   i.map((pkm) => {
     createCard(url, pkm.id, pkm);
   });
-});
-
-inputEl.addEventListener("input", (e) => {
-  //console.log(pokemonList);
-  const searchString = e.target.value;
-
-  container.replaceChildren();
-  pokemonList
-    .filter((prod) => prod?.name.includes(searchString))
-    .map((product) => createCard(product, container));
-
-  //console.log(pokemonList);
 });
