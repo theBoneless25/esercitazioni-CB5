@@ -38,6 +38,8 @@ form.addEventListener("submit", (e) => {
 // window.onload = GET(url).then(res => res.map(pkm => ul.innerHTML += `<li> ${pkm.id}: ${pkm.name}</li>`));
 
 const container = q(".container");
+const inputEl = q(".search");
+let pokemonList = [];
 
 const createCard = (url, id, i) => {
   const cardPokemon = c("div");
@@ -94,4 +96,17 @@ window.onload = GET(url).then((i) => {
   i.map((pkm) => {
     createCard(url, pkm.id, pkm);
   });
+});
+
+inputEl.addEventListener("input", (e) => {
+  //console.log(pokemonList);
+  const searchString = e.target.value;
+
+  container.replaceChildren();
+  pokemonList
+    .filter((pk) => pk?.name.includes(searchString))
+    .map((pkm) => createCard(pkm, container));
+
+  //console.log(pokemonList);
+  //
 });
