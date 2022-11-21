@@ -15,6 +15,9 @@ function sottrazione(a, b) {
 }
 
 function divisione(a, b) {
+  if (b === 0) {
+    console.log("Errore");
+  }
   return a / b;
 }
 
@@ -44,6 +47,10 @@ switch (myArgs[0]) {
     break;
 
   case "divisione":
+    if (myArgs[2] == 0) {
+      console.log("ERRORE");
+      break;
+    }
     let div = divisione(myArgs[1], myArgs[2]);
     div = parseFloat(div);
     console.log("il risultato è : " + div);
@@ -54,4 +61,41 @@ switch (myArgs[0]) {
     break;
 }
 
-// Esercizio avanzato
+// Esercizio avanzato da sistemare
+
+/*function calculator(operation, ...args) {
+  let i = 0;
+  switch (operation) {
+    case "sum":
+      for (let i in args) {
+        i += parseInt(args[i]);
+      }
+      console.log(`il risultato è : "  ${i}`);
+      break;
+    case "sub":
+      i = args[0];
+      for (let i = 1; i < args.length; i++) {
+        i -= parseInt(args[i]);
+      }
+      console.log(`il risultato è : "  ${i}`);
+      break;
+    case "molti":
+      i = 1;
+      for (let i = 1; i < args.length; i++) {
+        i *= parseInt(args[i]);
+      }
+      console.log(`il risultato è : "  ${i}`);
+      break;
+    case "div":
+      i = args[0] / args[1];
+      {
+        i /= parseInt(args[i]);
+      }
+      console.log(`il risultato è : "  ${i}`);
+      break;
+  }
+  return i;
+}
+
+const nums = arg.slice[1];
+calculator(arg[0], ...nums);*/ // da sistemare
