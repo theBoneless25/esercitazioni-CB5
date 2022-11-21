@@ -65,6 +65,7 @@ switch (myArgs[0]) {
 
 /*function calculator(operation, ...args) {
   let i = 0;
+  for(i=1; i< args.length; i++)
   switch (operation) {
     case "sum":
       for (let i in args) {
