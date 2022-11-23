@@ -60,5 +60,3 @@ switch (myArgs[0]) {
     NaN;
     break;
 }
-
-// Esercizio avanzato da sistemare

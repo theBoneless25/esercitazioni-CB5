@@ -1,6 +1,4 @@
-"use strict";
-
-function somma(a, b, c, ...args) {
+function sum(a, b, c, ...args) {
   let sum = 0;
   sum = a + b + c;
   for (let arg of args) sum += arg;
@@ -29,7 +27,7 @@ const myArgs = process.argv.slice(2);
 
 switch (myArgs[0]) {
   case "somma":
-    let sum = somma(myArgs[1], myArgs[2]);
+    let sum = sum(myArgs[1], myArgs[2]);
     sum = parseFloat(sum);
     console.log("il risultato è : " + sum);
     break;
@@ -61,4 +59,4 @@ switch (myArgs[0]) {
     break;
 }
 
-// Esercizio avanzato da sistemare
+export { sum, sottrazione, molti, divisione };
