@@ -8,7 +8,7 @@ const options = {
   mode: "no-cors",
 };
 
-const GET = async (url, pro) => {
+const GET = async (url) => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => (inputEl.textContent = "Il Risultato è: " + data));
