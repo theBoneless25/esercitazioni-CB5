@@ -3,7 +3,7 @@ const btnRis = formElement.btnRis; //--COSTANTI PER BUTTONE OPERAZIONI E FORM
 let operator = formElement.operator.value;
 
 const inputEl = document.querySelector("h3");
-const options = {
+const select = {
   method: "GET",
   mode: "no-cors",
 };
@@ -32,5 +32,5 @@ if (btnRis)
     else if (formElement.operator.value == "/")
       url = `http://localhost:3000/divisione?param1=${par1}&param2=${par2}`;
     else url = `http://localhost:3000/somma?param1=${par1}&param2=${par2}`;
-    GET(url, options);
+    GET(url, select);
   });
