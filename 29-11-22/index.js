@@ -11,7 +11,7 @@ app.listen(3000, () => {
 });
 
 app.get("/home", function (req, res) {
-  res.sendFile("homepage.html", { root: __dirname + "/public" });
+  res.sendFile("homepage.html", { root: __dirname + "/src" });
 });
 
 app.get("/attori", function (req, res) {
@@ -19,8 +19,8 @@ app.get("/attori", function (req, res) {
   const attori = JSON.parse(attoriText);
 
   const arr_attori = attori.map((att) => {
-    const { id, nome, cognome } = att;
-    return { id, nome, cognome };
+    const { id, nome, cognome, data_nascita } = att;
+    return { id, nome, cognome, data_nascita };
   });
   res.json(arr_attori);
 });
