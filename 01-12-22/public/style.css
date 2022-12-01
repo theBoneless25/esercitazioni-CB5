@@ -17,12 +17,12 @@ h1 {
   align-items: center;
 }
 
-.containerFormActor {
+.containerFormRegista {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.formActor {
+.formRegista {
   width: 200px;
   margin: auto;
   display: flex;
@@ -36,7 +36,7 @@ h1 {
   gap: 20px;
 }
 
-.actorForm input {
+.registaForm input {
   border: none;
   outline: none;
   font-weight: lighter;
@@ -66,7 +66,7 @@ button {
   margin-bottom: 30px;
 }
 
-.cardActor {
+.cardRegista {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
@@ -76,15 +76,15 @@ button {
   justify-content: center;
   text-align: center;
   border-radius: 10px;
-  color: white;
-  background-color: yellow;
+  color: goldenrod;
+  background-color: black;
 }
 
-.imageActor {
+.imageRegista {
   margin: 20px 0;
   width: 80px;
   height: 80px;
-  background-color: whitesmoke;
+  background-color: goldenrod;
   align-self: center;
   border-radius: 15px;
 }

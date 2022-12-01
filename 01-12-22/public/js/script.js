@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const form = document.forms.actor.elements;
+const form = document.forms.regista.elements;
 const element = form.addBtn;
 
 const GET = async (url) => {
@@ -64,8 +64,8 @@ const POST = async (url, body_message) => {
   return await res.json();
 };
 
-function createActor(body_message) {
-  const url = `http://localhost:3000/attore`;
+function createRegista(body_message) {
+  const url = `http://localhost:3000/regista`;
 
   return POST(url, body_message);
 }
@@ -82,11 +82,11 @@ addBtn.addEventListener("click", () => {
     data_nascita: form[2].value,
   };
 
-  createActor(regista).then((message) => {
+  createRegista(regista).then((message) => {
     console.log("Creazione andata bene!");
   });
 });
 
-window.onload = GET(url_regista).then((res) =>
+window.onload = GET(url_registi).then((res) =>
   res.map((regista) => createCard(regista))
 );
