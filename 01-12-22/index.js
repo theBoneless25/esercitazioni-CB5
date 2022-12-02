@@ -2,6 +2,12 @@ const express = require("express");
 
 const app = express();
 
+const middlewareProva = (req, res, next) => {
+  console.log(1);
+  console.log("Richiesta ricevuta.");
+  next();
+};
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
@@ -9,7 +15,7 @@ app.listen(3000, () => {
   console.log("Server avviato sulla porta 3000");
 });
 
-app.get("/home", function (req, res) {
+app.get("/home", middlewareProva, function (req, res) {
   res.sendFile("homepage.html", { root: __dirname + "/src" });
 });
 
@@ -70,8 +76,13 @@ app.post("/regista", function (req, res) {
       req.body.fine_attivita == undefined ? "" : req.body.fine_attivita,
     in_attivita: req.body.in_attivita == undefined ? "" : req.body.in_attivita,
   };
-  registi.push(nuovo_regista);
 
+  const arr_map = registi.map((regista) => regista.id);
+  const id_max = Math.max(...arr_map);
+  nuovo_regista.id = id_max + 1;
+
+  const index = registi.length;
+  registi[index] = nuovo_regista;
   writeFileSync("./src/registi.json", JSON.stringify(registi));
   res.status(200).json(registi);
 });
@@ -126,9 +137,9 @@ app.delete("/regista", function (req, res) {
 
   const id_da_cancellare = req.body.id;
 
-  const registi = JSON.parse(readFileSync("./src/attori.json", "utf8"));
+  const registi = JSON.parse(readFileSync("./src/registi.json", "utf8"));
 
-  const regista = attori.filter((regista) => {
+  const regista = registi.filter((regista) => {
     return regista.id == id_da_cancellare;
   });
 
