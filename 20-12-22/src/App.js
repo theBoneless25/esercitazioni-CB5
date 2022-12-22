@@ -14,7 +14,7 @@ function App() {
       <main>
         <Container withRow={0}>
           <Text as="h1" style={{ color: customColor }} variant="title">
-            Fai la tua Scelta!
+            Fai la tua Scelta!!
           </Text>
         </Container>
         <div className="App_button">
