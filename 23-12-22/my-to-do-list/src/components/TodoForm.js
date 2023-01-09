@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 function TodoForm(props) {
   const [input, setInput] = useState("");
@@ -26,7 +26,7 @@ function TodoForm(props) {
         className="todo-form"
         onChange={change}
       />
-      <button className="button-list">Aggiungi</button>
+      <button className="button-list">Aggiungi/Modifica</button>
     </form>
   );
 }
