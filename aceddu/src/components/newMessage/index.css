@@ -1,0 +1,77 @@
+.form {
+  align-items: center;
+  padding: 10px;
+  margin: 10px 10px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  gap: 30px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+
+.form input {
+  border-radius: 5%;
+  border: whitesmoke;
+}
+
+.form button {
+  width: 100px;
+  height: 100px;
+}
+
+.form button {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  /* gradient background -- thanks http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/ */
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -ms-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -moz-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -o-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #dfdfdf));
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -webkit-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
+
+  border: 1px solid #cccccc;
+  padding-top: 10px;
+
+  font-weight: bold;
+  font-size: 0.7em;
+  font-family: Arial;
+
+  color: #333333;
+  text-decoration: none;
+}
+
+button:hover {
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -ms-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -moz-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -o-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(1, #d9d9d9));
+  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
+      no-repeat 2px 1px,
+    -webkit-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+}

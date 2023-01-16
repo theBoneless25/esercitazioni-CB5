@@ -1,0 +1,32 @@
+.container_Message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 7px 15px;
+}
+
+.container_Message img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: lightblue;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.Message__textContent {
+  font-size: 0.7rem;
+}
+
+.Message__textContent p:nth-child(1) {
+  color: rgb(104, 104, 230);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.Message__textContent h4 {
+  margin: 4px 2px;
+  color: blue;
+  font-size: 1.2rem;
+}
