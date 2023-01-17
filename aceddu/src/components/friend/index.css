@@ -10,6 +10,14 @@
   border-radius: 100%;
   box-shadow: 0 0 2px rgba(11, 7, 7, 0.4);
   background-color: lightblue;
+  opacity: 0.8;
+}
+
+.Friend img:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .Friend__text {
