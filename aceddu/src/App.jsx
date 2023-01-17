@@ -2,7 +2,6 @@ import "./App.css";
 import NewMessage from "./components/newMessage";
 import MessagesList from "./components/messagesList";
 import FriendsList from "./components/friendsList";
-import NavBar from "./components/navbar/index";
 
 function App() {
   return (
