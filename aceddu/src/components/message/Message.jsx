@@ -13,8 +13,11 @@ const Message = ({ data }) => {
     <div className="container_Message">
       <img src={user.image} alt={user.firstName} />
       <div className="Message__textContent">
-        <p>@{user.firstName}</p>
-        <h4>{data.title}</h4>
+        <p>
+          @{user.firstName}
+          {user.lastName}
+        </p>
+        <h3>{data.title}</h3>
         <p>{data.body}</p>
       </div>
     </div>

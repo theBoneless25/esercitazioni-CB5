@@ -1,3 +1,35 @@
-body {
-  background-color: rgb(204, 225, 231);
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  .App {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-y: scroll;
+  }
+
+  .friendsSection {
+    padding: 24px;
+    background-color: rgb(242, 242, 242);
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .mainSection {
+    width: 100%;
+  }
 }

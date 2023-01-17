@@ -20,10 +20,17 @@
 const BASE_URL = "https://dummyjson.com";
 
 const GET = async (resource) => {
-  const res = await fetch(`${BASE_URL}/${resource}`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`${BASE_URL}/${resource}`);
+    const data = await res.json();
+    if (res.status >= 400) {
+      throw new Error("Houston abbiamo un problema!");
+    }
 
-  return data;
+    return data;
+  } catch (err) {
+    return { status: false };
+  }
 };
 
 const POST = async (resource, body) => {

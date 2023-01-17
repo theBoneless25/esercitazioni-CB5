@@ -1,13 +1,19 @@
 import "./App.css";
-import NewMessage from "./components/newMessage/index";
-import MessagesList from "./components/messagesList/index";
+import NewMessage from "./components/newMessage";
+import MessagesList from "./components/messagesList";
+import FriendsList from "./components/friendsList";
 import NavBar from "./components/navbar/index";
 
 function App() {
   return (
     <div className="App">
-      <NewMessage />
-      <MessagesList />
+      <div className="friendsSection">
+        <FriendsList />
+      </div>
+      <div className="mainSection">
+        <NewMessage />
+        <MessagesList />
+      </div>
     </div>
   );
 }

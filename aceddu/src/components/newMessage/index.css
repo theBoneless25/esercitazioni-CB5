@@ -1,77 +1,70 @@
-.form {
-  align-items: center;
-  padding: 10px;
-  margin: 10px 10px;
-  background-color: blue;
+.NewMessage form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-size: cover;
-  gap: 30px;
-  color: white;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 7px;
+  gap: 10px;
+  background-color: whitesmoke;
+  padding: 15px 15px;
+  border-radius: 10px;
 }
 
-.form input {
-  border-radius: 5%;
-  border: whitesmoke;
+.NewMessage input {
+  padding: 4px 2px 2px 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 0 3px (0, 0, 0, 0.4);
+  background-color: rgb(224, 237, 242);
 }
 
-.form button {
-  width: 100px;
-  height: 100px;
+.NewMessage {
+  margin: 25px;
+  width: 300px;
 }
 
-.form button {
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  /* gradient background -- thanks http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/ */
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -ms-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -moz-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -o-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #dfdfdf));
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -webkit-linear-gradient(top, #fefefe 0%, #dfdfdf 100%);
-
-  border: 1px solid #cccccc;
-  padding-top: 10px;
-
-  font-weight: bold;
-  font-size: 0.7em;
-  font-family: Arial;
-
-  color: #333333;
+.button_form {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: gray;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
   text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-button:hover {
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -ms-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -moz-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -o-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(1, #d9d9d9));
-  background: url("https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png")
-      no-repeat 2px 1px,
-    -webkit-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+.button_form:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 92%;
+}
+
+.button_form:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button_form {
+    padding: 16px 48px;
+  }
 }

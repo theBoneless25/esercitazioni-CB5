@@ -1,79 +1,75 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { POST } from "../../utils/http";
 import "./index.css";
 
 const NewMessage = () => {
-  const [posts, setPosts] = useState([]);
   const [msgText, setMsgText] = useState("");
-  const [msgTitle, setMsgTitle] = useState("");
+  const [userText, setUserText] = useState("");
+  const [titleText, setTitleText] = useState("");
+  const [imgText, setImgText] = useState("");
 
-  const onHandleInput = (e) => setMsgText(e.target.value);
+  const onHandleMsgText = (e) => setMsgText(e.target.value);
+  const onHandleUserText = (e) => setUserText(e.target.value);
+  const onHandleTitleText = (e) => setTitleText(e.target.value);
+  const onHandleImgText = (e) => setImgText(e.target.value);
+
+  const [messagePost, setMessagePost] = useState({});
 
   const onSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://dummyjson.com/posts`, {
-      method: "POST",
-      body: JSON.stringify({
-        /*title: title,
-        body:body, */
-        userId: Math.random().toString(32).slice(2),
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((post) => {
-        setPosts((posts) => [post, ...posts]);
-        setMsgTitle("");
-        setMsgText("");
-      })
-      .catch((err) => {
-        console.log(err, "Errore");
-      });
+    setMessagePost({
+      id: 1,
+      userId: 9,
+      image: imgText,
+      firstName: userText,
+      title: titleText,
+      body: msgText,
+    });
   };
+
+  useEffect(() => {
+    if (messagePost.firstName && messagePost.title)
+      POST("posts/add", messagePost).then(() => console.log("POST EFFETTUATA"));
+  }, [messagePost]);
 
   return (
     <div className="NewMessage">
       <form className="form" onSubmit={onSubmit}>
         <input
           value={msgText}
-          onChange={onHandleInput}
-          type="text"
-          placeholder="Username"
-          name="text"
-          className="form_input"
-        />
-        <div
-          id="drop_zone;"
-          ondrop="dropHandler(event);"
-          ondragover="dragOverHandler(event)"
-        >
-          <p>Carica la tua immagine profilo</p>
-          <input
-            type="file"
-            id="avatar"
-            name="avatar"
-            accept="image/png, image/jpeg"
-          />
-        </div>
-        <input
-          value={msgTitle}
-          onChange={onHandleInput}
-          type="text"
-          placeholder="Titolo"
-          name="text"
-          className="form_input"
-        />
-        <input
-          value={posts}
-          onChange={onHandleInput}
+          onChange={onHandleMsgText}
           type="text"
           placeholder="Raccontaci la tua giornata!"
           name="text"
           className="form_input"
+          required
         />
-        <button className="button_form">Pubblica</button>
+        <input
+          value={userText}
+          onChange={onHandleUserText}
+          type="text"
+          placeholder="Come ti chiami?"
+          className="form_input"
+          required
+        />
+        <input
+          value={titleText}
+          onChange={onHandleTitleText}
+          type="text"
+          placeholder="Raccontaci qualcosa di nuovo!"
+          className="form_input"
+          required
+        />
+        <input
+          value={imgText}
+          onChange={onHandleImgText}
+          type="text"
+          placeholder="Carica la tua immagine.."
+          className="form_input"
+          required
+        />
+        <input type="submit" value="Pubblica" className="button_form" />
       </form>
     </div>
   );
