@@ -1,0 +1,49 @@
+.container_filter {
+  width: 100%;
+  background: lightblue;
+  background: linear-gradient(
+    90deg,
+    lightblue 0%,
+    whitesmoke 50%,
+    lightblue 100%
+  );
+}
+
+.Filter {
+  display: flex;
+  gap: 15px;
+  margin: 50px 50px;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.input_filter {
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  font-size: 16px;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.input_filter:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .input_filter {
+    padding: 10px 30px;
+  }
+}

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 import "./index.css";
 
-const Message = ({ data }) => {
+const Message = ({ data, textContent }) => {
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Message = ({ data }) => {
           {user.lastName}
         </p>
         <h3>{data.title}</h3>
-        <p>{data.body}</p>
+        {textContent === "full" && <p>{data.body}</p>}
       </div>
     </div>
   );

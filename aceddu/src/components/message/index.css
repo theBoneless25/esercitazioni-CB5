@@ -4,6 +4,7 @@
   align-items: flex-start;
   gap: 20px;
   padding: 7px 15px;
+  margin-top: 50px;
 }
 
 .container_Message img {
@@ -27,6 +28,5 @@
 
 .Message__textContent h3 {
   margin: 4px 2px;
-  color: blue;
   font-size: 1.2rem;
 }

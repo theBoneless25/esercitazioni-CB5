@@ -25,11 +25,17 @@
   .friendsSection {
     padding: 24px;
     background-color: rgb(242, 242, 242);
+    width: 10%;
     height: 100vh;
     overflow-y: scroll;
   }
 
   .mainSection {
     width: 100%;
+  }
+  .popularSection {
+    padding: 24px;
+    background-color: rgb(242, 242, 242);
+    width: 25%;
   }
 }
