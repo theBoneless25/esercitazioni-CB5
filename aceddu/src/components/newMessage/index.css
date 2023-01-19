@@ -18,7 +18,8 @@
 
 .NewMessage {
   margin: 25px;
-  width: 300px;
+  width: 400px;
+  z-index: 2;
 }
 
 .button_form {

@@ -3,18 +3,17 @@ import { useState } from "react";
 import { POST } from "../../utils/http";
 import "./index.css";
 
-const NewMessage = () => {
+const NewMessage = ({ setModalDisactive }) => {
   const [msgText, setMsgText] = useState("");
   const [userText, setUserText] = useState("");
   const [titleText, setTitleText] = useState("");
   const [imgText, setImgText] = useState("");
+  const [messagePost, setMessagePost] = useState({});
 
   const onHandleMsgText = (e) => setMsgText(e.target.value);
   const onHandleUserText = (e) => setUserText(e.target.value);
   const onHandleTitleText = (e) => setTitleText(e.target.value);
   const onHandleImgText = (e) => setImgText(e.target.value);
-
-  const [messagePost, setMessagePost] = useState({});
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +25,7 @@ const NewMessage = () => {
       title: titleText,
       body: msgText,
     });
+    setModalDisactive(false);
   };
 
   useEffect(() => {

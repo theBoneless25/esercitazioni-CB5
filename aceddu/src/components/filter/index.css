@@ -7,17 +7,35 @@
     whitesmoke 50%,
     lightblue 100%
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Filter {
   display: flex;
   gap: 15px;
-  margin: 50px 50px;
   justify-content: center;
   border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
 }
 
-.input_filter {
+.input_text {
+  width: 90px;
+  height: 30px;
+}
+
+.input_button {
   background-color: whitesmoke;
   border: 1px solid whitesmoke;
   border-radius: 4px;
@@ -35,15 +53,33 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  z-index: 0;
 }
 
-.input_filter:hover {
+.input_button:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
   transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
-  .input_filter {
+  .input_button {
     padding: 10px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Filter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .container_filter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 100px;
   }
 }

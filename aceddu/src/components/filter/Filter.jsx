@@ -7,6 +7,7 @@ const Filter = ({ setFilterState }) => {
   const onHandleInput = (e) => {
     e.preventDefault();
     setInputFilter(e.target.value);
+    setFilterState(inputFilter);
   };
 
   const onHandleSubmit = (e) => {
@@ -21,9 +22,10 @@ const Filter = ({ setFilterState }) => {
           type="text"
           value={inputFilter}
           onChange={onHandleInput}
-          placeholder="Cerca post.."
+          placeholder="Cerca.."
+          className="input_text"
         />
-        <input type="submit" value="🔎" className="input_filter" />
+        <input type="submit" value="🔎" className="input_button" />
       </form>
     </div>
   );
