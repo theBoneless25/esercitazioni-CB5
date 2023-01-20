@@ -1,0 +1,43 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 24px;
+  border-bottom: 2px solid lightblue;
+  background: lightblue;
+  background: linear-gradient(
+    90deg,
+    lightblue 0%,
+    whitesmoke 50%,
+    lightblue 100%
+  );
+}
+
+.Navbar img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.Navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.Navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.username {
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.username:hover {
+  color: blue;
+}

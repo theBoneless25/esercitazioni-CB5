@@ -1,12 +1,5 @@
 .container_filter {
   width: 100%;
-  background: lightblue;
-  background: linear-gradient(
-    90deg,
-    lightblue 0%,
-    whitesmoke 50%,
-    lightblue 100%
-  );
   display: flex;
   justify-content: center;
   align-items: center;
