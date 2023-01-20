@@ -21,8 +21,8 @@ function App() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("username")) {
-      setUser(JSON.parse(localStorage.getItem("username")).username);
+    if (sessionStorage.getItem("username")) {
+      setUser(JSON.parse(sessionStorage.getItem("username")).username);
     }
   }, []);
 

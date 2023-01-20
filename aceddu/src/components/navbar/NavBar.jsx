@@ -5,11 +5,11 @@ const NavBar = () => {
   const [username, setUsername] = useState();
 
   useEffect(() => {
-    setUsername(JSON.parse(localStorage.getItem("username")));
+    setUsername(JSON.parse(sessionStorage.getItem("username")));
   }, []);
 
   const onLogout = () => {
-    localStorage.removeItem("username");
+    sessionStorage.removeItem("username");
     window.location.reload();
   };
 

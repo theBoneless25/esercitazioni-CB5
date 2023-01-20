@@ -13,7 +13,7 @@ const Login = () => {
           user.username === loginState.username &&
           user.password === loginState.password
         ) {
-          localStorage.setItem(
+          sessionStorage.setItem(
             "username",
             JSON.stringify({ ...loginState, imgProfile: user.imgProfile })
           );
