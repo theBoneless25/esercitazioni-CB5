@@ -1,0 +1,19 @@
+.cardPages {
+  border: 2px solid lightblue;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5%;
+  box-shadow: 0 0 5px blue;
+}
+.cardPages:hover {
+  cursor: pointer;
+  transform: translateX(20px);
+}
+
+._user {
+  color: rgb(33, 32, 32);
+  font-size: 18px;
+}
