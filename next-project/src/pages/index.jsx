@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
+import Image from "next/image";
 import styles from "@/styles/Home.module.css";
+import Gallery from "@/components/gallery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,15 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.home}>
-        <h1>Ciao belli!</h1>
-        <h2>Il mio primo progettino con:</h2>
-        <img
-          className={styles.imageHome}
-          src="https://soshace.com/wp-content/uploads/2019/10/Getting-Started-with-NextJS.jpg"
-          alt="nextlogo"
-        />
-      </div>
+      <Gallery />
     </>
   );
 }

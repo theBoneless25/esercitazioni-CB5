@@ -1,0 +1,31 @@
+.Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+  margin-top: 15px;
+
+  h1 {
+    font-size: 20px;
+    background-color: transparent;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 5%;
+    opacity: 0.8;
+  }
+  img:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.containerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 150px;
+}
