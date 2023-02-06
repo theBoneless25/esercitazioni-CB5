@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  border: 1px solid red;
+  border-radius: 8%;
+  flex-direction: column;
+  box-shadow: 0 0 8px red;
+  width: 80vh;
+  place-items: center;
+  justify-content: center;
+  background-color: rgb(41, 175, 220);
+}
