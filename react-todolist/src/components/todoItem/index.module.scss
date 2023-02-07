@@ -1,0 +1,24 @@
+.TodoItem {
+  padding: 8px 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  &:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  &:active {
+    background-color: gray;
+  }
+}
+
+.statusDone {
+  text-decoration: line-through;
+}

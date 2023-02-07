@@ -1,0 +1,26 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  height: 200px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      height: 80px;
+      width: 100%;
+      padding: 0 0 0 20px;
+      background: #e52d27;
+      background: -webkit-linear-gradient(to right, #b31217, #e52d27);
+      background: linear-gradient(to right, #b31217, #e52d27);
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      font-family: fantasy;
+      font-size: 2rem;
+    }
+  }
+}
