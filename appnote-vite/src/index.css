@@ -1,0 +1,5 @@
+body {
+  background: conic-gradient(from 135deg, #e1e2f2, #e1e2f2);
+  display: flex;
+  flex-direction: column;
+}

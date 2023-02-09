@@ -1,0 +1,27 @@
+.NoteContent {
+  width: 100%;
+  padding: 20px;
+  margin-left: 5px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 10px;
+  color: #673fd7;
+
+  input {
+    width: 300px;
+    padding: 12px 6px;
+    border-radius: 8px;
+    border: 0;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 676px) {
+  .NoteContent {
+    width: 50%;
+  }
+}
